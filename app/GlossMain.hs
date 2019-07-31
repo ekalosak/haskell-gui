@@ -1,4 +1,6 @@
-module Main where
+-- SOURCE:
+-- http://code.ouroborus.net/gloss/icebox/gloss-head.old-darcs/gloss-examples/picture/Hello/Main.hs
+module GlossMain where
 
 import Lib
 import Graphics.Gloss

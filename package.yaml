@@ -22,15 +22,29 @@ description:         Please see the README on GitHub at <https://github.com/ekal
 dependencies:
 - base >= 4.7 && < 5
 - gloss
+- Yampa
+- GLUT
 
 library:
   source-dirs: src
 
 executables:
-  hello-gui-exe:
-    main:                Main.hs
+  gloss:
+    main:                GlossMain.hs
     source-dirs:         app
     ghc-options:
+    - -main-is           GlossMain
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hello-gui
+
+  yampa:
+    main:                YampaMain.hs
+    source-dirs:         app
+    ghc-options:
+    - -main-is           YampaMain
     - -threaded
     - -rtsopts
     - -with-rtsopts=-N
